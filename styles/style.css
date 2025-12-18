@@ -1,0 +1,665 @@
+/* universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body set */
+body {
+  line-height: 20px;
+  padding-top: 50px;
+  font-family: "Exon", "sans-serif";
+}
+/* to scroll smoothly between section when click on navbar anchor */
+/* iam sure no one do this or even notice 🤣😍❤️ */
+html {
+  scroll-behavior: smooth;
+}
+/* every section glopal margin and width */
+.Section {
+  width: 100%;
+  margin-top: 50px;
+  padding: 50px 0;
+}
+/* a & span props */
+a,
+span {
+  display: inline-block;
+}
+/* to remove the underline for every anchor */
+a {
+  text-decoration: none;
+}
+/* le the image inside its parents */
+img {
+  max-width: 100%;
+  margin: auto;
+}
+/* fix every float cons */
+.clear-fix {
+  clear: both;
+}
+/* left and right spacing of the whole webpage */
+.container {
+  width: 80%;
+  margin: auto;
+}
+/* navigation bar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  background-color: bisque;
+  border-bottom: 1px solid #c1a0fe;
+  background-color: #f5f3ff;
+  font-size: medium;
+  z-index: 10;
+}
+.navbar .container .Nlogo {
+  float: left;
+  margin: 15px 0;
+}
+.container .Nlogo span {
+  background-color: #8e51ff;
+  border-radius: 8px;
+  margin-right: 5px;
+  padding: 10px;
+  font-size: large;
+  color: white;
+}
+.navbar .container .Nmenu {
+  float: right;
+}
+.navbar .container .Nmenu a {
+  margin-right: 35px;
+  margin-top: 28px;
+  position: relative;
+  color: black;
+  transition: ease 0.6s;
+}
+/* Home anchor color */
+#HOME {
+  color: #752bff;
+}
+#HOME::before {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  color: #d4ff51;
+  background-color: #752bff;
+}
+.navbar .container .Nmenu a::before {
+  content: "";
+  width: 0%;
+  height: 1.5px;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  color: #d4ff51;
+  background-color: #752bff;
+  transition: 0.6s;
+}
+.navbar .container .Nmenu a:hover::before {
+  width: 100%;
+}
+.navbar .container .Nmenu a:hover {
+  color: #752bff;
+}
+
+/* hero section styling */
+.Hero .container {
+  position: relative;
+}
+.Hero .container .Himage {
+  width: 47%;
+  float: left;
+  margin: auto;
+  padding: 25px;
+}
+.Hero .container .Htext {
+  width: 47%;
+  float: right;
+  margin: auto;
+  padding: 25px;
+  padding-left: 0;
+}
+
+.Hero .container .Himage,
+.Hero .container .Himage img {
+  border: 1px solid #e0e2e6;
+  border-radius: 25px;
+  margin: auto;
+}
+.Hero .container .Htext div {
+  margin-top: 30px;
+  font-size: large;
+}
+.Hero .container .Htext p {
+  line-height: 30px;
+  font-size: large;
+  font-weight: 200;
+}
+.Hero .container .Htext .money span {
+  margin-right: 5px;
+}
+.Hero .container .Htext .money span h3 {
+  text-decoration: line-through;
+  font-weight: 300;
+}
+.Hero .container .Htext .money span h4 {
+  background-color: #ffe2e2;
+  color: #e7000b;
+  border: 1px solid none;
+  border-radius: 15px;
+  padding: 4px 15px;
+  font-size: medium;
+}
+
+.Hero .Htext .but {
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  transition: all ease 0.5s;
+  padding: 20px;
+  margin-top: 20px;
+}
+.but:hover {
+  transform: scale(1.05);
+}
+#cart {
+  background-color: #8e51ff;
+  border: 1px solid #8e51ff;
+  color: white;
+}
+#wishlist {
+  background-color: white;
+  border: #d1d5dc;
+  border: 1px solid #d1d5dc;
+}
+.Hero .container .Himage .Hbadge h5 {
+  padding: 4px 15px;
+  background-color: #8e51ff;
+  width: fit-content;
+  color: white;
+  border: 1px solid none;
+  border-radius: 15px;
+  position: absolute;
+  top: 40px;
+  left: 70px;
+  line-height: normal;
+}
+.Hero .container .Hspan {
+  margin-top: 0;
+}
+.Hero .container .Hspan span {
+  border: 1px solid transparent;
+  background-color: #a684ff;
+  border-radius: 20px;
+  padding: 7px 15px;
+  margin-top: 0;
+  font-weight: 600;
+  color: white;
+  font-size: 15px;
+  margin-right: 5px;
+  line-height: normal;
+}
+
+.Hero .container .Htext h1 span {
+  color: #8e51ff;
+}
+/* end of hero section */
+
+/* start of comparison styling */
+.Comparison {
+  background-color: #f7f5ff;
+}
+.stars {
+  display: inline-block;
+}
+.Comparison .comparison-title {
+  text-align: center;
+  line-height: 40px;
+  font-size: larger;
+  margin-bottom: 50px;
+}
+.Comparison .comparison-title span {
+  color: #8e51ff;
+}
+/* comparison table styling */
+.Comparison .container {
+  border-radius: 15px;
+  padding: 30px;
+  overflow-x: auto;
+  background-color: white;
+  border: 1px solid grey;
+}
+.Comparison table th {
+  font-weight: 300;
+}
+.Comparison table {
+  overflow-x: auto;
+  text-align: center;
+  width: 100%;
+}
+header,
+footer {
+  padding: 25px auto;
+}
+.Comparison th {
+  text-align: start;
+}
+.Comparison th + td {
+  background-color: #ede9fe;
+}
+.Comparison thead th + td {
+  border-radius: 15px 15px 0 0;
+}
+/* space between icons and text in the table */
+.tIcon {
+  margin-right: 10px;
+}
+/* color all table cell with red */
+.Comparison .red-cell {
+  color: red;
+}
+td,
+th {
+  border-bottom: 1px solid rgb(209, 209, 209);
+  border-collapse: collapse;
+  padding: 15px;
+}
+tfoot th,
+tfoot td {
+  border: none;
+}
+.Comparison table .product {
+  background-color: #8e51ff;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: auto;
+  color: white;
+}
+.Comparison table tfoot th + td {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/* icons colors */
+.fa-video {
+  color: #00b8db;
+}
+.fa-camera {
+  color: #00bba7;
+}
+.fa-battery-full {
+  color: #00c950;
+}
+.fa-satellite-dish {
+  color: #ff6900;
+}
+.fa-shield-halved {
+  color: #00a6f4;
+}
+.fa-gauge-high {
+  color: #fb2c36;
+}
+.fa-scale-balanced {
+  color: #615fff;
+}
+.fa-cloud-rain {
+  color: #2b7fff;
+}
+.fa-dollar-sign {
+  color: #f0b100;
+}
+
+/* rating stars colors */
+.Comparison .yellow-star {
+  color: #fdc700;
+}
+.Comparison .grey-star {
+  color: #d1d5dc;
+}
+.Comparison .quarter-star {
+  color: #fdc700;
+}
+
+/* winner product badge */
+.Comparison .winner-badge {
+  margin: auto;
+  margin-top: 50px;
+  background-color: white;
+  text-align: center;
+  width: fit-content;
+  color: #00c950;
+  padding: 20px 30px;
+  border: 1px solid #d1d5dc;
+  border-radius: 15px;
+  height: fit-content;
+}
+.Comparison .winner-badge .trophy {
+  float: left;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.Comparison .winner-badge .Wtext {
+  float: right;
+  text-align: start;
+}
+
+.Review .Rtitle,
+.xx {
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.xx span {
+  color: #8e51ff;
+}
+.Review .allreviews {
+  height: 100px;
+}
+.moving {
+  float: left;
+  position: relative;
+  width: 30%;
+  height: 950px;
+}
+.Review .movingcard {
+  text-align: center;
+  width: 100%;
+  float: left;
+  height: fit-content;
+  border: 1px solid #d1d5dc;
+  border-radius: 12px;
+  padding: 20px 15px;
+  position: sticky;
+  top: 8px;
+}
+.Review .talk {
+  margin-top: -20px;
+  width: 65%;
+  float: right;
+}
+.Rstars {
+  color: #f0b100;
+  color: #fdc700;
+}
+.Review .rate {
+  border-bottom: 1px solid #d1d5dc;
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+.Review .ratestars {
+  margin: auto 2px;
+  font-size: x-large;
+}
+.Review .rateend {
+  margin: 40px auto;
+}
+.Review .movingcard h2 {
+  font-size: 60px;
+}
+.meter {
+  display: inline-block;
+  width: 80%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #e5e7eb;
+}
+.meter .yellowmeter {
+  background-color: #f0b100;
+  height: 10px;
+  border-radius: 10px;
+}
+/* rating meter in rate card */
+.Review .first {
+  width: 78%;
+}
+.Review .second {
+  width: 15%;
+}
+.Review .third {
+  width: 5%;
+}
+.Review .fourth {
+  width: 1.5%;
+}
+.Review .fifth {
+  width: 0.5%;
+}
+.rate,
+.rateend {
+  width: 100%;
+}
+.rateleft,
+.rateright {
+  width: 50%;
+  margin: auto;
+  float: left;
+  font-size: medium;
+  line-height: 20px;
+}
+.Review img {
+  display: inline-block;
+}
+.Review .staticcard {
+  margin-block: 20px;
+  border: 1px solid #d1d5dc;
+  border-radius: 20px;
+  width: 100%;
+  padding: 30px;
+}
+.Review .staticcard .verified {
+  width: fit-content;
+  padding: 5px 10px;
+  color: #5d0ec0;
+  background-color: #ede9fe;
+  border-radius: 15px;
+}
+.Review .morereview button {
+  background-color: #752bff;
+  color: white;
+  border: 1px solid #752bff;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: large;
+  margin: auto;
+  display: block;
+  font-weight: 600;
+}
+.Review button:hover {
+  background-color: white;
+  color: #752bff;
+}
+/* review verifications*/
+.Review .talkimg {
+  float: left;
+  width: 10%;
+  margin-right: 10px;
+  border: 1px solid #8e51ff;
+  overflow: hidden;
+  border-radius: 50%;
+  height: calc(width);
+}
+.Review .talkname {
+  float: left;
+  text-align: start;
+  width: fit-content;
+}
+.Review .talkverified {
+  float: right;
+  width: fit-content;
+  text-align: end;
+}
+
+/* ACCESSORY SHOWCASE STYILING */
+.Accessory {
+  background-color: #f7f5ff;
+}
+.showcase img {
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.scimg1:hover .img1 {
+  transform: scale(1.05);
+}
+.scimg2:hover .img2 {
+  transform: scale(1.05);
+}
+.scimg3:hover .img3 {
+  transform: scale(1.05);
+}
+.scimg4:hover .img4 {
+  transform: scale(1.05);
+}
+
+.showcase {
+  width: 23%;
+  height: auto;
+  float: left;
+  padding: 20px;
+  margin: auto;
+  border-radius: 15px;
+  border: 1px solid #d1d5dc;
+  position: relative;
+  line-height: 25px;
+  margin: auto 1%;
+}
+.showcase p > :first-child {
+  margin-right: 80px;
+}
+.showcase p button {
+  text-align: end;
+  padding: 5px 10px;
+  color: white;
+  border: 1px solid #8e51ff;
+  border-radius: 15px;
+  font-size: 15px;
+  background-color: #8e51ff;
+}
+
+.showcase .floating {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  padding: 3px 10px;
+  border-radius: 15px;
+  width: max-content;
+  color: white;
+}
+.SC1 {
+  background-color: #00bba7;
+}
+.SC2 {
+  background-color: #00c950;
+}
+.SC3 {
+  background-color: #00b8db;
+}
+.SC4 {
+  background-color: #ff6900;
+}
+.Accessory .viewbutton {
+  text-align: center;
+  margin-top: 20px;
+}
+.Accessory .view {
+  padding: 15px 25px;
+  margin: auto;
+  border-radius: 30px;
+  font-size: large;
+  color: #8e51ff;
+  background-color: white;
+  border: 2px solid #8e51ff;
+  font-weight: 400;
+}
+.Accessory .view:hover {
+  background-color: #8e51ff;
+  color: white;
+}
+.bodyfooter {
+  background-color: #101828;
+  padding: 30px 0px;
+  margin: auto;
+}
+
+.footertop {
+  border-bottom: 1px solid grey;
+  color: white;
+  padding: 50px 0px;
+}
+.footerend {
+  color: white;
+  margin: 20px auto;
+}
+
+.fa-brands {
+  color: white;
+}
+.orientation {
+  width: 25%;
+  float: left;
+  line-height: 30px;
+  padding: 0 10px;
+}
+.orientation a {
+  background-color: #1e2939;
+  padding: 10px;
+  line-height: normal;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+.facebook:hover {
+  background-color: #1877f2;
+}
+.twitter:hover {
+  background-color: #1da1f2;
+}
+.instagram:hover {
+  background-color: #e4405f;
+}
+.youtube:hover {
+  background-color: #ff0000;
+}
+.bodyfooter .footermenu {
+  width: 25%;
+  padding-left: 10px;
+  float: left;
+  line-height: 30px;
+}
+.footermenu p {
+  color: #b5b8be;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 40px;
+}
+/* change the footertop paragrapf color */
+.footermenu p:hover {
+  color: white;
+}
+
+/* footer end styling */
+.footerend p {
+  width: fit-content;
+  float: left;
+}
+.footerend img {
+  height: 20px;
+}
+.footspan {
+  float: right;
+  width: 30%;
+}
+.footerend span {
+  width: fit-content;
+  margin-left: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
